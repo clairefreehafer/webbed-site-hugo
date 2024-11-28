@@ -1,4 +1,6 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'hugo-bearblog'
+title = 'claire freehafer'
+# theme = 'hugo-bearblog'
+sectionPagesMenu = 'main'
+disableKinds = ['rss']
