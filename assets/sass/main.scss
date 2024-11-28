@@ -1,0 +1,23 @@
+@use "resets";
+
+html {
+  background-color: black;
+  color: white;
+}
+
+a {
+  color: white;
+
+  &:hover {
+    background-color: yellow;
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.rainbow-border {
+  border-image: linear-gradient(135deg, red, orange, yellow, green, blue, indigo, violet) 10;
+  border-width: 5px;
+  border-style: solid;
+  min-height: 100vh;
+}
