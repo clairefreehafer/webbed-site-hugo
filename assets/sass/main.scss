@@ -5,6 +5,7 @@
 html {
   background-color: black;
   color: white;
+  padding: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -24,6 +25,10 @@ a {
 .rainbow-border {
   @include mixins.rainbow-border(5px);
   min-height: 100vh;
+
+  @media screen and (max-width: variables.$max-site-width) {
+    @include mixins.rainbow-border(2px);
+  }
 }
 
 .body {
@@ -32,6 +37,12 @@ a {
   max-width: variables.$max-site-width;
   margin: 2rem auto;
   padding: 1rem;
+
+  @media screen and (max-width: variables.$max-site-width) {
+    background-color: unset;
+    border: none;
+    padding: 0;
+  }
 }
 
 .header {
