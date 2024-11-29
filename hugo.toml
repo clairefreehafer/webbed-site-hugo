@@ -1,6 +1,5 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://clairefreehafer.neocities.org/'
 languageCode = 'en-us'
 title = 'claire freehafer'
-# theme = 'hugo-bearblog'
 sectionPagesMenu = 'main'
 disableKinds = ['rss']

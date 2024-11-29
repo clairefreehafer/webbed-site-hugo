@@ -3,9 +3,14 @@
 @use "mixins";
 
 html {
-  background-color: black;
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
   color: white;
   padding: 1rem;
+
+  @media screen and (max-width: variables.$max-site-width) {
+    background: unset;
+    background-color: black;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,7 +36,25 @@ a {
   }
 }
 
-.body {
+#stars1 {
+  @media screen and (min-width: variables.$max-site-width) and (prefers-reduced-motion: no-preference) {
+    @include mixins.stars(1px, mixins.multiple-box-shadow(700), 50s);
+  }
+}
+
+#stars2 {
+  @media screen and (min-width: variables.$max-site-width) and (prefers-reduced-motion: no-preference) {
+    @include mixins.stars(2px, mixins.multiple-box-shadow(200), 100s);
+  }
+}
+
+#stars3 {
+  @media screen and (min-width: variables.$max-site-width) and (prefers-reduced-motion: no-preference) {
+    @include mixins.stars(3px, mixins.multiple-box-shadow(100), 150s);
+  }
+}
+
+.container {
   background-color: rgba(255, 255, 255, 0.1);
   border: 10px solid rgba(255, 255, 255, 0.8);
   max-width: variables.$max-site-width;
