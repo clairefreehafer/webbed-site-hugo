@@ -1,2 +1,7 @@
+{{ $lastUpdated := "today" }}
+{{ if .Site.Param "buildDate" }}
+  {{ $lastUpdated = .Site.Param "buildDate" }}
+{{ end }}
+
 made with <a href="https://gohugo.io" target="_blank">hugo</a> | hosted on <a href="https://neocities.org" target="_blank">neocties</a> | source code on <a href="https://github.com/clairefreehafer/webbed-site-hugo">github</a><br />
-last updated {{ .Site.Param "buildDate" }}
+last updated {{ $lastUpdated }}
