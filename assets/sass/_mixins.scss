@@ -1,0 +1,7 @@
+@use "variables";
+
+@mixin rainbow-border($border-width) {
+  border-image: linear-gradient(135deg, red, orange, yellow, green, blue, indigo, violet) 10;
+  border-width: $border-width;
+  border-style: solid;
+}

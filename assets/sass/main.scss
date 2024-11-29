@@ -1,8 +1,14 @@
 @use "resets";
+@use "variables";
+@use "mixins";
 
 html {
   background-color: black;
   color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: serif;
 }
 
 a {
@@ -16,8 +22,43 @@ a {
 }
 
 .rainbow-border {
-  border-image: linear-gradient(135deg, red, orange, yellow, green, blue, indigo, violet) 10;
-  border-width: 5px;
-  border-style: solid;
+  @include mixins.rainbow-border(5px);
   min-height: 100vh;
+}
+
+.body {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 10px solid rgba(255, 255, 255, 0.8);
+  max-width: variables.$max-site-width;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.header {
+  border-bottom: 1px dotted white;
+  padding-bottom: 1rem;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 1rem;
+}
+
+.nav-list_item {
+
+}
+
+.main {
+  font-family: sans-serif;
+  margin: 1rem 0;
+}
+
+.footer {
+  border-top: 1px dotted white;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: monospace;
+  line-height: 1.5;
+  padding-top: 1rem;
 }
