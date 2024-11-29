@@ -1,6 +1,7 @@
 +++
 title = 'test list'
 name = 'test list'
+draft = true
 +++
 
 - list item 1
