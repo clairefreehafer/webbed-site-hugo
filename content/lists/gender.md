@@ -1,12 +1,11 @@
 +++
 name = 'gender'
 title = 'gender'
-draft = true
 +++
 
 **bold** i have not read yet.
 
 #### articles
 
-- **[Paper: Feminism in Programming Language Design](https://www.felienne.com/archives/8470)** by Felienne Hermans
+- [Paper: Feminism in Programming Language Design](https://www.felienne.com/archives/8470) by Felienne Hermans
 - **[A Case For Feminism in Programming Language Design](https://dl.acm.org/doi/10.1145/3689492.3689809)** by Felienne Hermans & Ari Schlesinger — said paper from above blog post.
