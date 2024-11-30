@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html lang="{{ or site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}" class="rainbow-border">
 
+<html lang="{{ or site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}" class="html">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    {{ with .Site.Params.favicon }}
+    {{ with .Site.Params.favicon -}}
       <link rel="shortcut icon" href="{{ . | absURL }}" />
     {{ end }}
     {{ with .OutputFormats.Get "rss" -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
 
     <title>
       {{- block "title" . }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{- end }}
     </title>
 
-    {{ partial "head.html" . }}
+    {{ $headPath := "head.html" }}
+    {{ if eq .Type "animal-crossing" }}
+      {{ $headPath = "head.html" | printf "%s/%s" .Type }}
+    {{ end }}
+
+    {{ partial $headPath . }}
   </head>
 
   <body>
@@ -34,6 +39,10 @@
       <footer class="footer">
         {{ partial "footer.html" . }}
       </footer>
+
+      {{ if hugo.IsDevelopment }}
+        {{ partial "debug.html" . }}
+      {{ end }}
     </div>
   </body>
 

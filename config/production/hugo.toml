@@ -5,6 +5,10 @@ sectionPagesMenu = 'main'
 disableKinds = ['rss']
 [module]
   [[module.mounts]]
+    excludeFiles = 'components/*'
+    source = 'content'
+    target = 'content'
+  [[module.mounts]]
     excludeFiles = 'photography/*'
     source = 'content'
     target = 'content'

@@ -26,7 +26,6 @@
   }
 }
 
-// TODO: allow no animation
 @mixin stars($size, $shadow-fn, $speed) {
   width: $size;
   height: $size;
@@ -34,6 +33,10 @@
   box-shadow: $shadow-fn;
   animation: animStar $speed linear infinite;
   overflow: hidden;
+
+  @media screen and (prefers-reduced-motion: none) {
+    animation: unset;
+  }
 
   &:after {
     content: " ";
