@@ -26,16 +26,13 @@
   }
 }
 
-$shadows-small: multiple-box-shadow(700);
-$shadows-medium: multiple-box-shadow(200);
-$shadows-big: multiple-box-shadow(100);
-
+// TODO: allow no animation
 @mixin stars($size, $shadow-fn, $speed) {
   width: $size;
   height: $size;
   background: transparent;
   box-shadow: $shadow-fn;
-  animation	: animStar $speed linear infinite;
+  animation: animStar $speed linear infinite;
   overflow: hidden;
 
   &:after {

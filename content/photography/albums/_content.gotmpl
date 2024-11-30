@@ -1,0 +1,31 @@
+{{ $data := dict }}
+
+{{ $url := "ws.php?format=json&method=pwg.categories.getList" | printf "%s%s" (.Site.Param "photographyApiPath") }}
+{{ with resources.GetRemote $url }}
+  {{ with .Err }}
+    {{ errorf "Unable to get remote resource %s: %s" $url . }}
+  {{ else }}
+    {{ $data = .Content | transform.Unmarshal }}
+  {{ end }}
+{{ else }}
+  {{ errorf "Unable to get remote resource %s" $url }}
+{{ end }}
+
+{{ $categories := $data.result.categories }}
+
+{{ range $categories }}
+
+  {{/* Add page. */}}
+  {{ $content := dict "mediaType" "text/markdown" "value" .url }}
+  {{ $params := dict "id" .id }}
+  {{ $page := dict
+    "content" $content
+    "kind" "page"
+    "params" $params
+    "path" .name
+    "title" .name
+  }}
+  {{ $.AddPage $page }}
+{{ end }}
+
+

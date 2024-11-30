@@ -1,5 +1,5 @@
 +++
-type = 'list'
 name = 'lists'
 title = 'lists'
+type = 'list'
 +++

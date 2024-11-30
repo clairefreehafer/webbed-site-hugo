@@ -1,0 +1,10 @@
+baseURL = 'https://clairefreehafer.neocities.org/'
+languageCode = 'en-us'
+title = 'claire freehafer'
+sectionPagesMenu = 'main'
+disableKinds = ['rss']
+[module]
+  [[module.mounts]]
+    excludeFiles = 'photography/*'
+    source = 'content'
+    target = 'content'
