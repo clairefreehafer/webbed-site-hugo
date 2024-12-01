@@ -80,6 +80,22 @@ a {
   line-height: 1.5;
 }
 
+section.tags {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tags-list {
+  display: flex;
+  font-family: ui-monospace, monospace;
+  font-size: 0.875rem;
+  list-style: none;
+  padding: 0;
+  gap: 1rem;
+  text-transform: lowercase;
+}
+
 .footer {
   border-top: 1px dotted white;
   font-family: ui-monospace, monospace;
