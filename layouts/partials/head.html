@@ -1,4 +1,4 @@
-{{ with resources.Get "sass/_default/main.scss" }}
+{{ with resources.Get "sass/main.scss" }}
   {{ $opts := dict "transpiler" "dartsass" "targetPath" "css/style.css" }}
   {{ with . | toCSS $opts }}
     {{ if hugo.IsDevelopment }}

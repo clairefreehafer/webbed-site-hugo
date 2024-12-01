@@ -8,9 +8,17 @@
     {{ with .Site.Params.favicon -}}
       <link rel="shortcut icon" href="{{ . | absURL }}" />
     {{ end }}
-    {{ with .OutputFormats.Get "rss" -}}
-      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-    {{ end -}}
+
+    <!-- site-wide variables -->
+    {{ with resources.Get "variables.css" }}
+      {{ if hugo.IsDevelopment }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" />
+      {{ else }}
+        {{ with . | minify | fingerprint }}
+          <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" />
+        {{ end }}
+      {{ end }}
+    {{ end }}
 
     <title>
       {{- block "title" . }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{- end }}
