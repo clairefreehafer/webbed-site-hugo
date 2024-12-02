@@ -1,11 +1,10 @@
 +++
 name = 'website builders'
 title = 'website builders'
-draft = true 
 +++
 
 some cool & unique website building tools.
 
-- https://mmm.page/
-- https://hotglue.me/
-- https://paperwebsite.com/
+- [HOTGLUE](https://hotglue.me/)
+- [mmm.page](https://mmm.page/)
+- [paper website](https://paperwebsite.com/)
