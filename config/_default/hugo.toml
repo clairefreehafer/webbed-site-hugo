@@ -14,3 +14,8 @@ capitalizeListTitles = false
     excludeFiles = ['photography/*', 'components/*']
     source = 'content'
     target = 'content'
+  [[module.mounts]]
+    source = 'content/ingredients'
+    target = 'content/recipes/ingredients'
+[permalinks.term]
+  ingredients = 'recipes/ingredients/:title'
