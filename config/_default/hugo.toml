@@ -17,5 +17,9 @@ capitalizeListTitles = false
   [[module.mounts]]
     source = 'content/ingredients'
     target = 'content/recipes/ingredients'
+  [[module.mounts]]
+    source = 'content/tags'
+    target = 'content/lists/tags'
 [permalinks.term]
   ingredients = 'recipes/ingredients/:title'
+  tags = 'lists/tags/:title'

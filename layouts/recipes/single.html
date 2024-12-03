@@ -1,13 +1,5 @@
 {{ define "main" }}
-  <div class="heading">
-    <h2>
-      {{ with .Parent }}
-        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-      {{ end }}
-    </h2>
-    <span>&rarr;</span>
-    <h3>{{ .Title }}</h3>
-  </div>
+  {{ partial "title-in-section-heading.html" . }}
 
   {{ if .Params.sourceUrl }}
     <p class="recipe-source">[ <a href="{{ .Params.sourceUrl }}">source</a> ]</p>

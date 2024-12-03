@@ -1,7 +1,8 @@
 +++
 title = 'recipe ingredients'
 layout = 'taxonomy'
+type = 'taxonomy'
 url = 'recipes/ingredients'
 +++
 
-browse recipe by ingredient.
+browse recipes by ingredient.
