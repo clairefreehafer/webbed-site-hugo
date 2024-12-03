@@ -1,0 +1,8 @@
+<section class="see-more">
+  <h4>see more</h4>
+  <ul class="see-more_list">
+    {{ range . }}
+      <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+    {{ end }}
+  </ul>
+</section>

@@ -1,4 +1,4 @@
-{{ $debug := .Page }}
+{{ $debug := .Site.Taxonomies }}
 {{ if $debug }}
   <section class="debug">
     <pre>{{ debug.Dump $debug }}</pre>

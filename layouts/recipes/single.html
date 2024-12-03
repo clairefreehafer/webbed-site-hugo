@@ -16,14 +16,7 @@
   <section class="content">{{ .Content }}</section>
 
   {{ with .GetTerms "ingredients" }}
-    <section class="tags">
-      <h4>see more</h4>
-      <ul class="tags-list">
-        {{ range . }}
-          <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-        {{ end }}
-      </ul>
-    </section>
+    {{ partial "see-more.html" . }}
   {{ end }}
 
 {{ end }}
