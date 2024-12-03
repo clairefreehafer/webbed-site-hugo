@@ -9,6 +9,10 @@
     <h3>{{ .Title }}</h3>
   </div>
 
+  {{ if .Params.sourceUrl }}
+    <p class="recipe-source">[ <a href="{{ .Params.sourceUrl }}">source</a> ]</p>
+  {{ end }}
+
   <section class="content">{{ .Content }}</section>
 
   {{ with .GetTerms "ingredients" }}
