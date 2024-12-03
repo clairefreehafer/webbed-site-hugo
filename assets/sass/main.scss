@@ -1,11 +1,12 @@
 @use "resets";
 @use "variables";
 @use "mixins";
+@use "text";
 
 .html {
   @include mixins.rainbow-border(5px);
   background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
   min-height: 100vh;
   padding: 1rem;
 
@@ -13,20 +14,6 @@
     @include mixins.rainbow-border(2px);
     background: unset;
     background-color: black;
-  }
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: ui-serif, serif;
-}
-
-a {
-  color: white;
-
-  &:hover {
-    background-color: yellow;
-    color: black;
-    text-decoration: none;
   }
 }
 
@@ -53,7 +40,7 @@ a {
   border: 10px solid rgba(255, 255, 255, 0.8);
   max-width: variables.$max-site-width;
   margin: 2rem auto;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
 
   @media screen and (max-width: variables.$max-site-width) {
     background-color: unset;
@@ -78,9 +65,47 @@ a {
   font-family: system-ui, ui-sans-serif, sans-serif;
   margin: 1rem 0;
   line-height: 1.5;
+
+  & ol {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  & ul, ol {
+    margin: 1rem 0;
+
+  }
+
+}
+
+.heading {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.section-heading {
+  border-bottom: 3px dotted white;
+  width: min-content;
+}
+
+section.content {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px dotted white;
+  color: white;
+  padding: 1rem;
+
+  @media screen and (max-width: variables.$max-site-width) {
+    background-color: unset;
+    border: 0;
+    color: unset;
+    padding: 0;
+  }
 }
 
 section.tags {
+  align-items: center;
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
@@ -88,6 +113,7 @@ section.tags {
 
 .tags-list {
   display: flex;
+  flex-wrap: wrap;
   font-family: ui-monospace, monospace;
   font-size: 0.875rem;
   list-style: none;
@@ -98,6 +124,7 @@ section.tags {
 
 .footer {
   border-top: 1px dotted white;
+  color: rgba(255, 255, 255, 0.8);
   font-family: ui-monospace, monospace;
   font-size: 0.75rem;
   line-height: 1.5;

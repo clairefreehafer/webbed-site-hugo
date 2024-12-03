@@ -1,5 +1,6 @@
 {{ define "main" }}
-  <h2>{{ .Title }}</h2>
+
+  {{ partial "title-in-section-heading.html" . }}
   {{ .Content }}
   {{ range .Pages }}
     <ul>

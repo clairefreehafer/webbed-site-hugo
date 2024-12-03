@@ -3,6 +3,10 @@ languageCode = 'en-us'
 title = 'claire freehafer'
 sectionPagesMenu = 'main'
 disableKinds = ['rss']
+capitalizeListTitles = false
+[taxonomies]
+  tag = 'tags'
+  ingredient = 'ingredients'
 [module]
   [[module.mounts]]
     excludeFiles = ['photography/*', 'components/*']

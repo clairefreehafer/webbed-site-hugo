@@ -1,0 +1,26 @@
+{{ define "main" }}
+  <div class="heading">
+    <h2>
+      {{ with .Parent }}
+        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      {{ end }}
+    </h2>
+    <span>&rarr;</span>
+    <h3>{{ .Title }}</h3>
+  </div>
+
+  <section class="content">{{ .Content }}</section>
+
+  {{ with .GetTerms "ingredients" }}
+    <section class="tags">
+      <h4>see more</h4>
+      <ul class="tags-list">
+        {{ range . }}
+          <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+        {{ end }}
+      </ul>
+    </section>
+  {{ end }}
+
+{{ end }}
+

@@ -3,5 +3,14 @@ languageCode = 'en-us'
 title = 'claire freehafer'
 sectionPagesMenu = 'main'
 disableKinds = ['rss']
+capitalizeListTitles = false
+[taxonomies]
+  tag = 'tags'
+  ingredient = 'ingredients'
 [Params]
-  photographyApiPath = ""
+  photographyApiPath = ''
+[module]
+  [[module.mounts]]
+    excludeFiles = ['photography/*', 'components/*']
+    source = 'content'
+    target = 'content'

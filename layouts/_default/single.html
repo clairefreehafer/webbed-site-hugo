@@ -1,6 +1,5 @@
 {{ define "main" }}
-  <h2>{{ .Section }}</h2>
-  <h3>{{ .Title }}</h3>
+  {{ partial "title-in-section-heading.html" . }}
 
   {{ .Content }}
 
