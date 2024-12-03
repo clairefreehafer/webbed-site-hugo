@@ -1,11 +1,14 @@
 {{ define "main" }}
   <h2 class="section-heading">{{ .Title }}</h2>
+
   <section class="content">
     {{ .Content }}
 
     <ul class="section-list">
       {{ range .Pages }}
-        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+        {{ if not (eq .Kind "taxonomy") }}
+          <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+        {{ end }}
       {{ end }}
     </ul>
   </section>
