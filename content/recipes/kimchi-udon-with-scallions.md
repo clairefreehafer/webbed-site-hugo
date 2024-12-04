@@ -28,4 +28,4 @@ ingredients = [
 
 2. meanwhile, boil **1 lb. udon noodles** according to package directions.
 
-3. using tongs, transfer noodles to skillet and add remaining **"3 tbsp. unsalted butter**; cook, tossing often, until sauce coats noodles, about 2 minutes. season with salt, if needed. divide among bowls and top with **egg yolks**, **scallions**, and **toasted sesame seeds**.
+3. using tongs, transfer noodles to skillet and add remaining **3 tbsp. unsalted butter**; cook, tossing often, until sauce coats noodles, about 2 minutes. season with salt, if needed. divide among bowls and top with **egg yolks**, **scallions**, and **toasted sesame seeds**.
