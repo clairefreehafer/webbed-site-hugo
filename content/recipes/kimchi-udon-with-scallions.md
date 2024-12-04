@@ -1,7 +1,7 @@
 +++
 name = 'kimchi udon with scallions'
 title = 'kimchi udon with scallions'
-sourceUrl = 'https://www.bonappetit.com/recipe/gochujang-sesame-noodles'
+sourceUrl = 'https://www.bonappetit.com/recipe/kimchi-udon-with-scallions'
 ingredients = [
   'noodles',
   'gochujang',
