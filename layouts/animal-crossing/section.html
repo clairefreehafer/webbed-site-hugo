@@ -1,3 +1,11 @@
-{{ define "main" }}
-  <p>test</p>
+{{ define "head" }}
+  {{ partial "animal-crossing/head.html" . }}
+{{ end }}
+
+{{ define "body" }}
+  <p>{{ .Content }}</p>
+
+  {{ if hugo.IsDevelopment }}
+    {{ partial "debug.html" . }}
+  {{ end }}
 {{ end }}

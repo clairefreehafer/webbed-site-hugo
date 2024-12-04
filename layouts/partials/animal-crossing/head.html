@@ -1,6 +1,6 @@
-{{ with .Resources.Get "sass/main.scss" }}
+{{ with resources.Get "sass/animal-crossing/style.scss" }}
   {{ if . }}
-    {{ $opts := dict "transpiler" "dartsass" "targetPath" "css/animal-crossing/style.css" }}
+    {{ $opts := dict "transpiler" "dartsass" "targetPath" "/video-games/animal-crossing/css/style.css" }}
     {{ with . | toCSS $opts }}
       {{ if hugo.IsDevelopment }}
         <link rel="stylesheet" href="{{ .RelPermalink }}">

@@ -24,34 +24,45 @@
       {{- block "title" . }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{- end }}
     </title>
 
-    {{ $headPath := "head.html" }}
-    {{ if eq .Type "animal-crossing" }}
-      {{ $headPath = "head.html" | printf "%s/%s" .Type }}
-    {{ end }}
+    {{- block "head" . }}
+      {{ with resources.Get "sass/_default/style.scss" }}
+        {{ $opts := dict "transpiler" "dartsass" "targetPath" "css/style.css" }}
+        {{ with . | toCSS $opts }}
+          {{ if hugo.IsDevelopment }}
+            <link rel="stylesheet" href="{{ .RelPermalink }}">
+          {{ else }}
+            {{ with . | minify | fingerprint }}
+              <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{ end -}}
 
-    {{ partial $headPath . }}
   </head>
 
   <body>
-    <div id="stars1"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>
+    {{ block "body" . }}
+      <div id="stars1"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
 
-    <div class="container">
-      <header class="header">
-        {{ partial "header.html" . }}
-      </header>
-      <main class="main">
-        {{ block "main" . }}{{ end }}
-      </main>
-      <footer class="footer">
-        {{ partial "footer.html" . }}
-      </footer>
+      <div class="container">
+        <header class="header">
+          {{ partial "header.html" . }}
+        </header>
+        <main class="main">
+          {{ block "main" . }}{{ end }}
+        </main>
+        <footer class="footer">
+          {{ partial "footer.html" . }}
+        </footer>
 
-      {{ if hugo.IsDevelopment }}
-        {{ partial "debug.html" . }}
-      {{ end }}
-    </div>
+        {{ if hugo.IsDevelopment }}
+          {{ partial "debug.html" . }}
+        {{ end }}
+      </div>
+    {{ end }}
   </body>
 
 </html>
