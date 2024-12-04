@@ -1,7 +1,6 @@
 baseURL = 'http://localhost:1313/'
 languageCode = 'en-us'
 title = 'claire freehafer'
-sectionPagesMenu = 'main'
 disableKinds = ['rss']
 capitalizeListTitles = false
 [taxonomies]
@@ -14,6 +13,8 @@ capitalizeListTitles = false
     excludeFiles = ['photography/*', 'components/*']
     source = 'content'
     target = 'content'
+[permalinks.section]
+  'animal-crossing' = 'video-games/animal-crossing/'
 [permalinks.term]
   ingredients = 'recipes/ingredients/:title'
   tags = 'lists/tags/:title'

@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <h2 class="section-heading">{{ .Title }}</h2>
+
+  <section class="content">
+    {{ .Content }}
+
+    <ul class="section-list">
+      {{ range .Site.Menus.videoGame }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}
