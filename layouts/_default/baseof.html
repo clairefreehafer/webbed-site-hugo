@@ -9,8 +9,8 @@
       <link rel="shortcut icon" href="{{ . | absURL }}" />
     {{ end }}
 
-    <!-- site-wide variables -->
-    {{ with resources.Get "variables.css" }}
+    <!-- site-wide styles -->
+    {{ with resources.Get "site.css" }}
       {{ if hugo.IsDevelopment }}
         <link rel="stylesheet" href="{{ .RelPermalink }}" />
       {{ else }}
@@ -24,20 +24,9 @@
       {{- block "title" . }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{- end }}
     </title>
 
-    {{- block "head" . }}
-      {{ with resources.Get "sass/_default/style.scss" }}
-        {{ $opts := dict "transpiler" "dartsass" "targetPath" "css/style.css" }}
-        {{ with . | toCSS $opts }}
-          {{ if hugo.IsDevelopment }}
-            <link rel="stylesheet" href="{{ .RelPermalink }}">
-          {{ else }}
-            {{ with . | minify | fingerprint }}
-              <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-            {{- end -}}
-          {{- end -}}
-        {{- end -}}
-      {{- end -}}
-    {{ end -}}
+    {{- block "head" . -}}
+      {{- partial "head.html" . -}}
+    {{- end -}}
 
   </head>
 

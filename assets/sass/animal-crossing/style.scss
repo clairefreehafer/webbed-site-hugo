@@ -1,0 +1,63 @@
+@use "variables";
+
+@font-face {
+  font-family: "Seurat";
+  src: url("/video-games/animal-crossing/fonts/seurat.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Fink Heavy";
+  src: url("/video-games/animal-crossing/fonts/fink-heavy.woff2") format("woff2")
+}
+
+.html {
+  background-position: left calc(50% - 128px) top calc(70px + 7.5rem);
+}
+
+.container {
+  max-width: variables.$max-site-width;
+  margin: 2rem auto;
+}
+
+main.sand {
+  background-color: variables.$sand;
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 0.5rem -0.5rem rgba(0, 0, 0, 0.5);
+  background-position: top center;
+  background-repeat: repeat-x;
+  font-family: "Seurat", sans-serif;
+  max-width: variables.$max-site-width;
+  padding: 9rem 1rem 1rem;
+
+  @media screen and (max-width: variables.$max-site-width) {
+
+  }
+}
+
+.svg-title {
+  font-family: "Fink Heavy", "Georgia", sans-serif;
+  font-size: 3rem;
+  width: 350px;
+  height: variables.$svg-height;
+  fill: rgba(231, 197, 73, 1);
+}
+
+.svg-background {
+  fill: rgba(231, 197, 73, 1);
+  stroke: rgba(145, 107, 51, 1);
+  stroke-width: 15px;
+  stroke-linejoin: round;
+  paint-order: stroke;
+}
+
+.svg-background-shadow {
+  fill: black;
+  stroke: black;
+  stroke-width: 15px;
+  stroke-linejoin: round;
+  paint-order: stroke;
+}
+
+.svg-emboss {
+  fill: rgba(231, 197, 73, 0.5);
+}

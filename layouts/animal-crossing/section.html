@@ -3,9 +3,15 @@
 {{ end }}
 
 {{ define "body" }}
-  <p>{{ .Content }}</p>
+  <div class="container">
+    {{ partial "animal-crossing/logo.html" . }}
 
-  {{ if hugo.IsDevelopment }}
-    {{ partial "debug.html" . }}
-  {{ end }}
+    <main class="sand">
+      {{ .Content }}
+    </main>
+
+    {{ if hugo.IsDevelopment }}
+      {{ partial "debug.html" . }}
+    {{ end }}
+  </div>
 {{ end }}

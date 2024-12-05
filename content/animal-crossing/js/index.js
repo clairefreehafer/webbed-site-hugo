@@ -56,7 +56,13 @@ function getGrassDateRange(date = new Date()) {
 
 const grassDateRange = getGrassDateRange();
 
-const html = document.getElementsByClassName("html")?.[0];
-if (!html) throw new Error("there was a problem getting the .html element.");
-html.style.backgroundColor = grassBackgroundColors[grassDateRange];
-html.style.backgroundImage = `url("/video-games/animal-crossing/images/grass/square_${grassDateRange}.png")`;
+window.addEventListener("DOMContentLoaded", () => {
+  const html = document.getElementsByClassName("html")?.[0];
+  if (!html) throw new Error("there was a problem getting the .html element.");
+  html.style.backgroundColor = grassBackgroundColors[grassDateRange];
+  html.style.backgroundImage = `url("/video-games/animal-crossing/images/grass/square_${grassDateRange}.png")`;
+
+  const container = document.getElementsByClassName("sand")?.[0];
+  if (!container) throw new Error("there was a problem getting the .sand element.");
+  container.style.backgroundImage = `url("/video-games/animal-crossing/images/sand/square_${grassDateRange}.png")`;
+});
