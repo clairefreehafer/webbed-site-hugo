@@ -6,7 +6,7 @@ ingredients = [
   'noodles',
   'gochujang',
   'kimchi',
-  'scallions'
+  'scallion'
 ]
 +++
 
