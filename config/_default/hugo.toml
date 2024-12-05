@@ -15,6 +15,7 @@ capitalizeListTitles = false
     target = 'content'
 [permalinks.section]
   'animal-crossing' = 'video-games/animal-crossing/'
+  'the-witness' = 'video-games/the-witness'
 [permalinks.term]
   ingredients = 'recipes/ingredients/:title'
   tags = 'lists/tags/:title'

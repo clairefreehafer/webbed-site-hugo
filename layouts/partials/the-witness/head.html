@@ -1,0 +1,16 @@
+{{ with resources.Get "sass/the-witness/style.scss" }}
+  {{ if . }}
+    {{ $opts := dict "transpiler" "dartsass" "targetPath" "/video-games/the-witness/css/style.css" }}
+    {{ with . | toCSS $opts }}
+      {{ if hugo.IsDevelopment }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}">
+      {{ else }}
+        {{ with . | minify | fingerprint }}
+          <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ else }}
+    {{ warnf "Unable to get sass %s" . }}
+  {{ end }}
+{{ end }}
