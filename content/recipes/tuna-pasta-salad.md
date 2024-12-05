@@ -1,6 +1,6 @@
 +++
-name = 'kimchi udon with scallions' 
-title = 'kimchi udon with scallions'
+name = 'tuna pasta salad' 
+title = 'tuna pasta salad'
 sourceUrl = 'https://www.acouplecooks.com/tuna-pasta-salad/'
 ingredients = [
   'pasta',
