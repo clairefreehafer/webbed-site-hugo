@@ -20,6 +20,11 @@
   flex-direction: column;
   max-width: variables.$max-site-width;
   margin: 2rem auto;
+
+  @media screen and (max-width: variables.$max-site-width) {
+    margin-bottom: 0;
+    min-height: calc(100vh - 2rem);
+  }
 }
 
 main.sand {
@@ -33,7 +38,9 @@ main.sand {
   padding: 9rem 2rem 2rem;
 
   @media screen and (max-width: variables.$max-site-width) {
-
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    flex-grow: 2;
   }
 }
 
