@@ -1,4 +1,5 @@
 @use "variables";
+@use "mixins";
 
 @font-face {
   font-family: "Seurat";
@@ -11,10 +12,12 @@
 }
 
 .html {
-  background-position: left calc(50% - 128px) top calc(70px + 7.5rem);
+  background-position: left calc(50% - 128px) top calc(70px + 2rem);
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   max-width: variables.$max-site-width;
   margin: 2rem auto;
 }
@@ -27,7 +30,7 @@ main.sand {
   background-repeat: repeat-x;
   font-family: "Seurat", sans-serif;
   max-width: variables.$max-site-width;
-  padding: 9rem 1rem 1rem;
+  padding: 9rem 2rem 2rem;
 
   @media screen and (max-width: variables.$max-site-width) {
 
@@ -60,4 +63,10 @@ main.sand {
 
 .svg-emboss {
   fill: rgba(231, 197, 73, 0.5);
+}
+
+.debug {
+  @include mixins.text-background;
+  margin: 2rem 0;
+  padding: 2rem;
 }
