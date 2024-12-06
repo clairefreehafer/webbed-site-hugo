@@ -6,5 +6,3 @@ menus = 'videoGame'
 seciton = 'the-witness'
 type = 'the-witness'
 +++
-
-⚠️ under construction! ⚠️

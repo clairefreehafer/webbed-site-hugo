@@ -7,7 +7,7 @@ body {
 .background {
   background-image: url('/video-games/the-witness/images/vertical-banners/VerticalBanners_High01.jpg');
   background-size: cover;
-  // filter: blur(3px);
+  filter: blur(3px);
   width: 100%;
   height: 100%;
   min-height: 100vh;
@@ -36,6 +36,10 @@ h1.name {
   text-align: center;
 }
 
+main {
+  margin-top: 2rem;
+}
+
 .photo {
   margin: variables.$border-width;
   padding: 0 variables.$border-width;
@@ -45,6 +49,7 @@ h1.name {
 }
 
 .photo-border {
+  aspect-ratio: 1/1;
   background: rgb(143, 150, 158);
   box-shadow: inset 0 0 0.25rem 0.1rem rgba(0, 0, 0, 0.3),
               0 0 1.5rem 0.1rem rgba(0, 0, 0, 0.3);
@@ -59,7 +64,7 @@ h1.name {
 
 .photo-inset-shadow-helper {
   position: absolute;
-  z-index: variables.$inset-shadow-zindex;
+  z-index: variables.$inset-shadow-helper-zindex;
   width: 100%;
   height: 100%;
   max-width: 100%;
@@ -75,4 +80,6 @@ h1.name {
   height: 100%;
   margin: 0 variables.$border-width;
   max-width: calc(100% - 2 * variables.$border-width);
+  position: relative;
+  z-index: variables.$inset-shadow-zindex;
 }
