@@ -31,9 +31,9 @@ h4 {
   font-size: 1.25rem;
 }
 
-.content h4 {
+.content h4, .content h3 {
   border-bottom: 2px dotted yellow;
-  max-width: min-content;
+  max-width: fit-content;
 }
 
 .see-more h4 {

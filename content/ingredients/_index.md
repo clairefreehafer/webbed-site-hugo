@@ -1,7 +1,6 @@
 +++
+kind = 'taxonomy'
 title = 'recipe ingredients'
-layout = 'taxonomy'
-type = 'taxonomy'
 url = 'recipes/ingredients'
 +++
 

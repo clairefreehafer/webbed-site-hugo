@@ -1,0 +1,27 @@
+{{ define "main" }}
+  <h2 class="section-heading">{{ .Title }}</h2>
+  <pre>ingredients/taxonomy.html</pre>
+
+  <section class="content">
+    {{ .Content }}
+
+    {{ $pages := .Pages }}
+
+    {{ range $foodType, $food := .Site.Data.recipes.ingredients }}
+      <h3>{{ $foodType }}</h3>
+      <ul class="section-list">
+        {{ $pagesOfType := where $pages "Params.foodType" $foodType }}
+        {{ range $pagesOfType }}
+          <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+        {{ end }}
+      </ul>
+    {{ end }}
+
+    <h3>not yet categorized</h3>
+    <ul class="section-list">
+      {{ range where .Pages "Params.foodtype" nil  }}
+        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}
