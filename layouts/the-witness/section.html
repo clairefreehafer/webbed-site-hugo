@@ -9,8 +9,10 @@
     <header>
       <h1 class="name">Claire Freehafer</h1>
     </header>
-    <main class="sand">
+    <main>
       {{ .Content }}
+
+      {{ partial "the-witness/puzzle-border.html" . }}
     </main>
 
     {{ if hugo.IsDevelopment }}

@@ -1,1 +1,11 @@
 $max-site-width: 750px;
+
+$border-width: 2rem;
+
+$photo-z-index: 0;
+
+$ui-z-index: $photo-z-index + 2;
+$inset-shadow-zindex: $photo-z-index + 1;
+// $photo-z-index: 0;
+$texture-z-index: $photo-z-index - 1;
+$border-z-index: $photo-z-index - 2;
