@@ -1,5 +1,7 @@
 @use "variables";
 
+// TODO: add cursor
+
 body {
   position: relative;
 }
@@ -60,6 +62,7 @@ main {
   align-items: center;
   justify-content: center;
   z-index: variables.$border-z-index;
+  max-height: 100vh;
 }
 
 .photo-inset-shadow-helper {
