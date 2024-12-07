@@ -6,9 +6,13 @@
   <div class="container">
     {{ partial "animal-crossing/logo.html" . }}
 
-    <main class="sand">
-      {{ .Content }}
-    </main>
+    <div class="sand">
+      {{ partial "nav.html" . }}
+
+      <main>
+        {{ .Content }}
+      </main>
+    </div>
 
     {{ if hugo.IsDevelopment }}
       {{ partial "debug.html" . }}

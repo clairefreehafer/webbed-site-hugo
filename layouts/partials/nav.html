@@ -1,10 +1,12 @@
-<ul class="nav-list">
-  <li class="nav-list_item">
-    <a href="{{ "" | relURL }}">home</a>
-  </li>
-  {{ range .Site.Menus.root }}
+<nav>
+  <ul class="nav-list">
     <li class="nav-list_item">
-      <a href="{{ .URL }}">{{ .Name }}</a>
+      <a href="{{ "" | relURL }}">home</a>
     </li>
-  {{ end }}
-</ul>
+    {{ range .Site.Menus.root }}
+      <li class="nav-list_item">
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      </li>
+    {{ end }}
+  </ul>
+</nav>

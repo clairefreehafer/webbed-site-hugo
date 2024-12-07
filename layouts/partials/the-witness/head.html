@@ -1,6 +1,6 @@
 {{ with resources.Get "sass/the-witness/style.scss" }}
   {{ if . }}
-    {{ $opts := dict "transpiler" "dartsass" "targetPath" "/video-games/the-witness/css/style.css" }}
+    {{ $opts := dict "transpiler" "dartsass" "targetPath" "css/the-witness.css" }}
     {{ with . | toCSS $opts }}
       {{ if hugo.IsDevelopment }}
         <link rel="stylesheet" href="{{ .RelPermalink }}">

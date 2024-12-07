@@ -1,0 +1,13 @@
+@use "mixins";
+
+nav {
+  @include mixins.text-background;
+  padding: 1.5rem 0.5rem;
+  margin-top: -0.5rem;
+}
+
+ul.nav-list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
