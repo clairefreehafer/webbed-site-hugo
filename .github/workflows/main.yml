@@ -29,6 +29,7 @@ jobs:
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
+          HUGO_PARAMS_SMUGMUGAPIKEY: ${{ secrets.SMUGMUG_API_KEY }}
           TZ: America/New_York
         run: |
           hugo \

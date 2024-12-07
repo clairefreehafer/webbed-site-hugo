@@ -1,0 +1,18 @@
+{
+  "filter": [""],
+  "filteruri": ["AlbumImages"],
+  "expand": {
+    "AlbumImages": {
+      "args": {
+        "count": 10
+      },
+      "filter": [""],
+      "filteruri": ["ImageSizeDetails"],
+      "expand": {
+        "ImageSizeDetails": {
+          "filter": ["ImageSizeLarge"]
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 <div class="photo-border">
-  <img src="https://photos.smugmug.com/Video-Games/The-Witness/i-LtrVsnL/0/L6RqKVdVkvbnjJvLD9Tb7wcGsz64ChGnPWTLnmLfz/XL/26810332954-XL.png" alt="" class="photo" id="image-" data-title="" data-date="" />
+  <img src="{{ .Url }}" alt="" class="photo" loading="lazy" />
   <div class="photo-inset-shadow-helper">
-    {{ with resources.GetRemote "https://photos.smugmug.com/Video-Games/The-Witness/i-LtrVsnL/0/L6RqKVdVkvbnjJvLD9Tb7wcGsz64ChGnPWTLnmLfz/XL/26810332954-XL.png" }}
+    {{ with resources.GetRemote .Url }}
       {{ $leastDominant := index (.Colors | collections.Reverse) 0 }}
       {{ $mostDominant := index .Colors 0 }}
       {{ $lightest := index (sort .Colors "Luminance" "desc") 0 }}
@@ -9,3 +9,5 @@
     {{ end }}
   </div>
 </div>
+
+<div class="connector"></div>
