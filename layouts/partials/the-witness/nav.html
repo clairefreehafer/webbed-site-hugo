@@ -2,7 +2,7 @@
   <div class="puzzle-inset-shadow-helper">
     <div class="puzzle-inset-shadow"></div>
   </div>
-  <div class="nav-puzzle">
+  <div class="nav-puzzle desktop">
     <div class="circle"></div>
     {{ range .Site.Menus.root }}
       <div class="section">
@@ -17,4 +17,6 @@
     {{ end }}
     <div class="circle opacity-0"></div>
   </div>
+
+  {{ partial "nav.html" . }}
 </div>
