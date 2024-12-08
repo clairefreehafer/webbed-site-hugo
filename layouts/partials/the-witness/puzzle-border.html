@@ -1,11 +1,11 @@
 <div class="photo-border">
   <img src="{{ .Url }}" alt="" class="photo" loading="lazy" />
-  <div class="photo-inset-shadow-helper">
+  <div class="puzzle-inset-shadow-helper">
     {{ with resources.GetRemote .Url }}
       {{ $leastDominant := index (.Colors | collections.Reverse) 0 }}
       {{ $mostDominant := index .Colors 0 }}
       {{ $lightest := index (sort .Colors "Luminance" "desc") 0 }}
-      <div class="photo-inset-shadow" style="background-color:{{ $leastDominant }}"></div>
+      <div class="puzzle-inset-shadow" style="background-color:{{ $leastDominant }}"></div>
     {{ end }}
   </div>
 </div>

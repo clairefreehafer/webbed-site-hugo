@@ -9,13 +9,16 @@
     <header>
       <h1 class="name">Claire Freehafer</h1>
     </header>
+    <nav>
+      {{ partial "the-witness/nav.html" . }}
+    </nav>
     <main>
       {{ .Content }}
 
       {{ $data := dict }}
       {{ $config := .Site.Data.smugmug.albumImagesConfig | jsonify }}
       {{ $urlQuery := urlquery $config }}
-      {{ warnf "%s" hugo }}
+
       {{ $url := printf  "https://api.smugmug.com/api/v2/album/NwLgn9?APIKey=%s&_config=%s" (.Site.Param "smugmugApiKey") $urlQuery }}
       {{ $opts := dict
         "headers" (dict "Accept" "application/json")
@@ -39,7 +42,12 @@
     </main>
 
     {{ if hugo.IsDevelopment }}
-      {{ partial "debug.html" . }}
+      <div class="debug">
+        {{ partial "debug.html" . }}
+        <div class="puzzle-inset-shadow-helper">
+          <div class="puzzle-inset-shadow"></div>
+        </div>
+      </div>
     {{ end }}
   </div>
 {{ end }}

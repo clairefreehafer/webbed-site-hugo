@@ -1,5 +1,7 @@
 @use "variables";
 
+@use "puzzle";
+
 // TODO: add cursor
 
 body {
@@ -45,6 +47,12 @@ main {
   margin-top: 2rem;
 }
 
+.photo-border {
+  @include puzzle.puzzle-screen(variables.$border-width, rgb(143, 150, 158));
+  aspect-ratio: 1/1;
+  max-height: 100vh;
+}
+
 .photo {
   margin: variables.$border-width;
   padding: 0 variables.$border-width;
@@ -53,46 +61,14 @@ main {
   z-index: variables.$photo-z-index;
 }
 
-.photo-border {
-  aspect-ratio: 1/1;
-  background: rgb(143, 150, 158);
-  box-shadow: inset 0 0 0.25rem 0.1rem rgba(0, 0, 0, 0.3),
-              0 0 1.5rem 0.1rem rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  place-self: center;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: variables.$border-z-index;
-  max-height: 100vh;
-}
-
-.photo-inset-shadow-helper {
-  position: absolute;
-  z-index: variables.$inset-shadow-helper-zindex;
+div.debug {
+  @include puzzle.puzzle-screen(20px, rgb(143, 150, 158), blue);
+  color: white;
   width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  top: 0;
-  padding: variables.$border-width 0;
 }
 
-.photo-inset-shadow {
-  border-radius: 1%;
-  box-shadow: inset 0 0 0.25rem 0.1rem rgba(0, 0, 0, 0.3);
+section.debug {
+  padding: 40px;
+  text-shadow: white 0px 0 5px;
   width: 100%;
-  height: 100%;
-  margin: 0 variables.$border-width;
-  max-width: calc(100% - 2 * variables.$border-width);
-  position: relative;
-  z-index: variables.$inset-shadow-zindex;
-}
-
-.connector {
-  background-color: rgb(49, 49, 49);
-  box-shadow: 0 0 1.5rem 0.1rem rgba(0, 0, 0, 0.3);
-  width: 10%;
-  height: 3rem;
 }
