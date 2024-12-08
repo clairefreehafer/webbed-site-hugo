@@ -1,6 +1,6 @@
 @use "variables";
-
 @use "puzzle";
+@use "nav";
 
 // TODO: add cursor
 
@@ -48,7 +48,7 @@ main {
 }
 
 .photo-border {
-  @include puzzle.puzzle-screen(variables.$border-width, rgb(143, 150, 158));
+  @include puzzle.puzzle-screen(variables.$border-width, variables.$puzzle-border-color);
   aspect-ratio: 1/1;
   max-height: 100vh;
 }
@@ -62,7 +62,7 @@ main {
 }
 
 div.debug {
-  @include puzzle.puzzle-screen(20px, rgb(143, 150, 158), blue);
+  @include puzzle.puzzle-screen(20px, variables.$puzzle-border-color, blue);
   color: white;
   width: 100%;
 }

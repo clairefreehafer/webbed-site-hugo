@@ -21,6 +21,7 @@
     max-height: 100%;
     top: 0;
     padding: $border-width 0;
+    pointer-events: none;
   }
 
   & .puzzle-inset-shadow {
@@ -31,6 +32,7 @@
     margin: 0 $border-width;
     max-width: calc(100% - 2 * $border-width);
     position: relative;
+    pointer-events: none;
     z-index: variables.$inset-shadow-zindex;
   }
 }
