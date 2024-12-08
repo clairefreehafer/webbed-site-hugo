@@ -1,9 +1,10 @@
 <nav>
   <ul class="nav-list">
-    <li class="nav-list_item">
-      <a href="{{ "" | relURL }}">home</a>
-    </li>
     {{ range .Site.Menus.root }}
+    {{ $linkIcon := (index .Params.icon $.Page.Section) }}
+      {{ with $.Resources.Get (printf "/images/icons/%s" $linkIcon) }}
+      <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" class="nav-icon">
+      {{ end }}
       <li class="nav-list_item">
         <a href="{{ .URL }}">{{ .Name }}</a>
       </li>
