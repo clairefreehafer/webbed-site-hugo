@@ -7,7 +7,9 @@
     {{ partial "animal-crossing/logo.html" . }}
 
     <div class="sand">
-      {{ partial "nav.html" . }}
+      <nav>
+        {{ partial "animal-crossing/nav.html" . }}
+      </nav>
 
       <main>
         {{ .Content }}
