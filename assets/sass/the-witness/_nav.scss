@@ -46,6 +46,7 @@ nav {
   padding: calc($border-width * 2);
   width: 100%;
   flex-wrap: wrap;
+  gap: 0.5rem;
   padding: $border-width;
 
   @media screen and (min-width: variables.$nav-min-width) {

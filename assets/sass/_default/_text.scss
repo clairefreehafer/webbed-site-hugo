@@ -48,7 +48,7 @@ h4 {
 a {
   color: white;
 
-  &:hover {
+  &:hover, &:focus {
     background-color: yellow;
     color: black;
     text-decoration: none;
