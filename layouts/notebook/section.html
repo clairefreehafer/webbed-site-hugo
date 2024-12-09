@@ -4,7 +4,7 @@
 
 {{ define "body" }}
   <div class="container">
-    <h1>claire freehafer</h1>
+    <h1 class="name">claire freehafer</h1>
     <nav>
       <ul class="nav-list">
         {{ range .Site.Menus.root }}
@@ -21,5 +21,9 @@
       </ul>
     </nav>
 
+    <main class="paper">
+      <h2>{{ .Page.Title }}</h2>
+      {{ .Content }}
+    </main>
   </div>
 {{ end }}

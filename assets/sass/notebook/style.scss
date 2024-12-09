@@ -1,3 +1,4 @@
+@use "variables";
 @use "nav";
 
 @font-face {
@@ -20,6 +21,16 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+@font-face {
+  // google font
+  font-family: 'Pangolin';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/pangolin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 .html {
   // https://davegh.com/
   background-image: url("/images/wood1.jpg");
@@ -27,8 +38,25 @@
 
 h1 {
   font-family: "Love Ya Like A Sister", sans-serif;
-  font-size: 3rem;
   font-weight: normal;
+
+  &.name {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  font-family: "Love Ya Like A Sister", serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: calc(variables.$paper-line-height + 1px);
+}
+
+p {
+  font-family: "Pangolin", sans-serif;
+  font-size: 1.25rem;
+  line-height: calc(variables.$paper-line-height + 1px);
+  margin-bottom: calc(variables.$paper-line-height + 1px);
 }
 
 a {
@@ -44,6 +72,38 @@ a {
   color: white;
   display: flex;
   flex-direction: column;
-  margin: 1rem auto;
+  margin: 0 auto;
   max-width: 750px;
+  padding: 1rem;
+}
+
+.paper {
+  background:
+    linear-gradient(
+      to right,
+      transparent variables.$red-line-padding,
+      variables.$paper-red-line variables.$red-line-padding calc(variables.$red-line-padding + 1px),
+      transparent variables.$red-line-padding
+    ),
+    linear-gradient(
+      to bottom,
+      white 0 4rem,
+      transparent 4rem
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      white 0 variables.$paper-line-height,
+      variables.$paper-blue-line variables.$paper-line-height calc(variables.$paper-line-height + 1px),
+      white calc(variables.$paper-line-height + 1px)
+    );
+  border-radius: 3rem;
+  box-shadow:
+    inset 0 0 0.25rem 0.1rem rgba(0, 0, 0, 0.3),
+    0 0 1.5rem 0.1rem rgba(0, 0, 0, 0.3),
+    0 0 2rem rgba(0, 0, 0, 0.3);
+  color: black;
+  line-height: calc(variables.$paper-line-height + 1px);
+  margin-top: 2rem;
+  padding: 51px 1rem variables.$paper-line-height calc(variables.$red-line-padding + 0.5rem);
+  width: 100%;
 }

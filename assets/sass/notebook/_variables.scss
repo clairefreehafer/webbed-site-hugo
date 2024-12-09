@@ -1,3 +1,5 @@
+$max-site-width: 750px;
+
 // https://open-props.style
 $wiggle-box-1: 255px 15px 225px 15px / 15px 225px 15px 255px;
 $wiggle-box-2: 125px 10px 20px 185px / 25px 205px 205px 25px;
@@ -7,3 +9,11 @@ $wiggle-box-5: 250px 25px 15px 20px / 15px 80px 105px 115px;
 $wiggle-box-6: 28px 100px 20px 15px / 150px 30px 205px 225px;
 
 $wiggle-boxes: $wiggle-box-1, $wiggle-box-2, $wiggle-box-3, $wiggle-box-4, $wiggle-box-5, $wiggle-box-6;
+
+$paper-red-line: rgba(255, 0, 0, 0.8);
+$paper-blue-line: rgba(0, 255, 255, 0.8);
+
+$paper-line-height: 1.5rem;
+$red-line-padding: 3rem;
+$paper-top-padding: calc(2 * $paper-line-height);
+$pape-line-spacing: calc($paper-line-height + 1px);
