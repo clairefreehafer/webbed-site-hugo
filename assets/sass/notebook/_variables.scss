@@ -17,3 +17,11 @@ $paper-line-height: 1.5rem;
 $red-line-padding: 3rem;
 $paper-top-padding: calc(2 * $paper-line-height);
 $pape-line-spacing: calc($paper-line-height + 1px);
+
+@mixin text-outline($width, $blur-radius, $color) {
+  text-shadow:
+    $width $width $blur-radius $color,
+    $width calc(-1 * $width) $blur-radius $color,
+    calc(-1 * $width) calc(-1 * $width) $blur-radius $color,
+    calc(-1 * $width) $width $blur-radius $color;
+}

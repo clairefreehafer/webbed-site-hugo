@@ -13,6 +13,7 @@
 
 @font-face {
   // google font
+  // possible thicker alternative: https://fonts.google.com/specimen/Courier+Prime
   font-family: "Cutive Mono";
   font-style: normal;
   font-weight: 400;
@@ -33,8 +34,10 @@
 
 .html {
   // https://davegh.com/
-  background-image: url("/images/wood1.jpg");
-  background-size: cover;
+  background-image: url("/images/stone-ivy.jpg"), url("/images/stone.jpg");
+  background-position: top left, min(100vw, 1000px) left;
+  background-repeat: repeat-x, repeat;
+  background-size: cover, cover;
 }
 
 h1 {
@@ -42,7 +45,9 @@ h1 {
   font-weight: normal;
 
   &.name {
+    @include variables.text-outline(1px, 2px, black);
     font-size: 3rem;
+    text-align: center;
   }
 }
 
