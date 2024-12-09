@@ -8,14 +8,10 @@ capitalizeListTitles = false
   ingredient = 'ingredients'
 [Params]
   photographyApiPath = ''
-[module]
-  [[module.mounts]]
-    excludeFiles = ['photography/*', 'components/*']
-    source = 'content'
-    target = 'content'
 [permalinks.section]
-  'animal-crossing' = 'video-games/animal-crossing/'
-  'the-witness' = 'video-games/the-witness'
+  animal-crossing = 'video-games/animal-crossing/'
+  the-witness = 'video-games/the-witness'
+  uncharted-4 = 'video-games/uncharted-4'
 [permalinks.term]
   ingredients = 'recipes/ingredients/:title'
   tags = 'lists/tags/:title'

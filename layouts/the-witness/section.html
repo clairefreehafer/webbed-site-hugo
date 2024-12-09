@@ -19,18 +19,22 @@
       {{ $config := .Site.Data.smugmug.albumImagesConfig | jsonify }}
       {{ $urlQuery := urlquery $config }}
 
-      {{ $url := printf  "https://api.smugmug.com/api/v2/album/NwLgn9?APIKey=%s&_config=%s" (.Site.Param "smugmugApiKey") $urlQuery }}
-      {{ $opts := dict
-        "headers" (dict "Accept" "application/json")
-      }}
-      {{ with resources.GetRemote $url $opts }}
-        {{ with .Err }}
-          {{ errorf "%s" . }}
+      {{ if .Site.Param "smugmugApiKey" }}
+        {{ $url := printf  "https://api.smugmug.com/api/v2/album/NwLgn9?APIKey=%s&_config=%s" (.Site.Param "smugmugApiKey") $urlQuery }}
+        {{ $opts := dict
+          "headers" (dict "Accept" "application/json")
+        }}
+        {{ with resources.GetRemote $url $opts }}
+          {{ with .Err }}
+            {{ errorf "%s" . }}
+          {{ else }}
+            {{ $data = . | transform.Unmarshal }}
+          {{ end }}
         {{ else }}
-          {{ $data = . | transform.Unmarshal }}
+          {{ errorf "Unable to get remote resource %q" $url }}
         {{ end }}
       {{ else }}
-        {{ errorf "Unable to get remote resource %q" $url }}
+        no smugmug api key provided.
       {{ end }}
 
       {{ range $data.Expansions }}

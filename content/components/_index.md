@@ -1,4 +1,0 @@
-+++
-name = 'components'
-title = 'components'
-+++
