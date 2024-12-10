@@ -13,6 +13,12 @@
 
       <main>
         {{ .Content }}
+
+        {{ with resources.Get "images/animal-crossing/stickers.png" }}
+          <a href="/video-games/animal-crossing/pocket-camp">
+            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="planner" />
+          </a>
+        {{ end }}
       </main>
     </div>
 

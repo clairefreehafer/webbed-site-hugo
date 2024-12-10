@@ -9,7 +9,7 @@ capitalizeListTitles = false
 [Params]
   photographyApiPath = ''
 [permalinks.section]
-  animal-crossing = 'video-games/animal-crossing/'
+  animal-crossing = 'video-games/animal-crossing'
   the-witness = 'video-games/the-witness'
   uncharted-4 = 'video-games/uncharted-4'
 [permalinks.term]

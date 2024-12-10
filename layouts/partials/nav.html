@@ -2,7 +2,7 @@
   {{ range .Site.Menus.root }}
   {{ $linkIcon := (index .Params.icon $.Page.Section) }}
   <li class="nav-list_item">
-    {{ with $.Resources.Get (printf "/images/icons/%s" $linkIcon) }}
+    {{ with resources.Get (printf "/images/%s/icons/%s" $.Page.Section $linkIcon) }}
       <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" class="nav-icon">
       {{ end }}
       <a href="{{ .URL }}">{{ .Name }}</a>

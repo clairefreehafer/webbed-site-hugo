@@ -6,5 +6,3 @@ menus = 'videoGame'
 seciton = 'animal-crossing'
 type = 'animal-crossing'
 +++
-
-⚠️ under construction! ⚠️

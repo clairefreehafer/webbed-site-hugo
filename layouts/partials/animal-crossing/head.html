@@ -15,7 +15,7 @@
   {{ end }}
 {{ end }}
 
-{{ with .Resources.Get "js/index.js" }}
+{{ with resources.Get "js/animal-crossing/index.js" }}
   {{ if hugo.IsDevelopment }}
     {{ with . | js.Build }}
       <script src="{{ .RelPermalink }}"></script>
