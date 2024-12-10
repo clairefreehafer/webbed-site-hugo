@@ -1,0 +1,28 @@
+.html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 0.5rem;;
+}
+
+a {
+  color: black;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+a.home:hover::before {
+  content: '←';
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+
+h1 {
+  font-weight: 300;
+}
