@@ -26,4 +26,8 @@
       {{ .Content }}
     </main>
   </div>
+
+  {{ with resources.Match "images/notebook/stone*.jpg" }}
+    {{ range . }} {{  $foo := .RelPermalink }} {{ end }}
+  {{ end }}
 {{ end }}

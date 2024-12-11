@@ -6,3 +6,5 @@ menus = 'videoGame'
 seciton = 'animal-crossing'
 type = 'animal-crossing'
 +++
+
+{{< animal-crossing/home >}}

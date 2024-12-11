@@ -28,3 +28,11 @@
   {{ end }}
 {{ end }}
 
+{{ with resources.Match "images/animal-crossing/grass/*" }}
+  {{ range . }} {{  $foo := .RelPermalink }} {{ end }}
+{{ end }}
+
+{{ with resources.Match "images/animal-crossing/sand/*" }}
+  {{ range . }} {{  $foo := .RelPermalink }} {{ end }}
+{{ end }}
+

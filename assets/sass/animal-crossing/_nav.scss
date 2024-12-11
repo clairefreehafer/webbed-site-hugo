@@ -19,7 +19,7 @@ nav {
 
 details {
   & > summary {
-    background-image: url('/video-games/animal-crossing/images/icons/closed-letter.png');
+    background-image: url('/images/animal-crossing/icons/closed-letter.png');
     background-size: contain;
     background-repeat: no-repeat;
     display: flex;
@@ -31,7 +31,7 @@ details {
   }
 
   &[open] > summary {
-    background-image: url('/video-games/animal-crossing/images/icons/open-letter.png');
+    background-image: url('/images/animal-crossing/icons/open-letter.png');
     margin-bottom: 0.5rem;
   }
 

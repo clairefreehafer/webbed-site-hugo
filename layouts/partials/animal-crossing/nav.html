@@ -3,6 +3,10 @@
   {{ partial "nav.html" . }}
 </details>
 
+{{ with resources.Match "/images/animal-crossing/icons/*-letter.png" }}
+  {{ range . }} {{  $foo := .RelPermalink }} {{ end }}
+{{ end }}
+
 <div class="desktop-menu">
   {{ partial "nav.html" . }}
 </div>

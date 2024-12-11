@@ -90,7 +90,7 @@ main {
 
 img.planner {
   filter: drop-shadow(5px 5px 10px #222);
-  max-height: 50vw;
+  max-height: min(50vw, 50vh);
   width: auto;
   height: auto;
   transform: rotate(5deg);
