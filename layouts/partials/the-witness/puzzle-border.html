@@ -1,13 +1,15 @@
 <div class="photo-border">
-  <img src="{{ .Url }}" alt="" class="photo" loading="lazy" />
-  <div class="puzzle-inset-shadow-helper">
-    {{ with resources.GetRemote .Url }}
-      {{ $leastDominant := index (.Colors | collections.Reverse) 0 }}
-      {{ $mostDominant := index .Colors 0 }}
-      {{ $lightest := index (sort .Colors "Luminance" "desc") 0 }}
-      <div class="puzzle-inset-shadow" style="background-color:{{ $leastDominant }}"></div>
-    {{ end }}
-  </div>
+  {{ $imageUrl := .Url }}
+  {{ with resources.GetRemote .Url }}
+    {{ $leastDominant := index (.Colors | collections.Reverse) 0 }}
+    {{ $mostDominant := index .Colors 0 }}
+    {{ $lightest := index (sort .Colors "Luminance" "desc") 0 }}
+    <div class="puzzle-background" style="background-color:{{ $leastDominant }}">
+      <img src="{{ $imageUrl }}" alt="" class="photo" loading="lazy" />
+    </div>
+
+    <div class="inner-shadow"></div>
+  {{ end }}
 </div>
 
 <div class="connector"></div>

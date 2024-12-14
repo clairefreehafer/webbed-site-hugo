@@ -8,9 +8,14 @@ body {
   position: relative;
 }
 
+@mixin responsive-background {
+  // TODO
+  // https://photos.smugmug.com/photos/i-24LdzSh/0/Kx36JBLZpKhLTXxFKWzdGJZDKk266MMNBJG4TDkj5/4K/i-24LdzSh-4K.jpg
+}
+
 .background {
   background-image: url('/video-games/the-witness/images/vertical-banners/VerticalBanners_High01.jpg');
-  background-size: contain;
+  background-size: cover;
   filter: blur(3px);
   width: 100%;
   height: 100%;
@@ -51,14 +56,6 @@ main {
   @include puzzle.puzzle-screen(variables.$border-width, variables.$puzzle-border-color);
   aspect-ratio: 1/1;
   max-height: 100vh;
-}
-
-.photo {
-  margin: variables.$border-width;
-  padding: 0 variables.$border-width;
-  max-width: 100%;
-  object-fit: contain;
-  z-index: variables.$photo-z-index;
 }
 
 div.debug {

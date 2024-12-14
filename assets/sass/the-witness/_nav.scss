@@ -23,13 +23,21 @@ $circle-diameter: $puzzle-line-width * 2;
 
 .nav-border {
   @include puzzle.puzzle-screen($border-width, variables.$puzzle-border-color, blue);
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+
+  & .puzzle-background {
+    margin: $border-width 0;
+  }
+
+  & .inner-shadow {
+    pointer-events: none;
+  }
 
   @media screen and (max-width: variables.$nav-min-width) {
     @include puzzle.puzzle-screen(calc($border-width / 2), variables.$puzzle-border-color, blue);
-    z-index: 0;
+
+    & .puzzle-background {
+      margin: calc($border-width / 2) 0;
+    }
   }
 }
 
@@ -48,6 +56,10 @@ nav {
   flex-wrap: wrap;
   gap: 0.5rem;
   padding: $border-width;
+}
+
+.nav-mobile {
+  height: 100%;
 
   @media screen and (min-width: variables.$nav-min-width) {
     display: none;
@@ -63,9 +75,11 @@ nav {
 }
 
 .nav-puzzle {
-  padding: calc($border-width * 2);
-  width: 100%;
+  height: calc(100% - 2 * $border-width);
+  width: calc(100% - 2 * $border-width);
   display: flex;
+  padding: 1rem;
+  width: 100%;
 
   & .section {
     align-self: stretch;

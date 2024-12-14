@@ -1,22 +1,23 @@
 <div class="nav-border">
-  <div class="puzzle-inset-shadow-helper">
-    <div class="puzzle-inset-shadow"></div>
-  </div>
-  <div class="nav-puzzle desktop">
-    <div class="circle"></div>
-    {{ range .Site.Menus.root }}
-      <div class="section">
-        <div class="nav-link">
-          <a href="{{ .URL }}">{{ .Name }}</a>
+  <div class="puzzle-background" style="background-color:blue">
+    <div class="nav-puzzle">
+      <div class="circle"></div>
+      {{ range .Site.Menus.root }}
+        <div class="section">
+          <div class="nav-link">
+            <a href="{{ .URL }}">{{ .Name }}</a>
+          </div>
+          <div class="elbow">
+            <div class="horizontal"></div>
+            <div class="vertical"></div>
+          </div>
         </div>
-        <div class="elbow">
-          <div class="horizontal"></div>
-          <div class="vertical"></div>
-        </div>
-      </div>
-    {{ end }}
-    <div class="circle opacity-0"></div>
+      {{ end }}
+      <div class="circle opacity-0"></div>
+    </div>
+    <div class="nav-mobile">
+      {{ partial "nav.html" . }}
+    </div>
+    <div class="inner-shadow"></div>
   </div>
-
-  {{ partial "nav.html" . }}
 </div>
