@@ -2,6 +2,7 @@
 @use "mixins";
 
 @use "nav";
+@use "nookphone";
 
 @font-face {
   font-family: "Seurat";
@@ -86,6 +87,13 @@ main {
   display: flex;
   flex-direction: column;
   margin: 2rem;
+}
+
+.home-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
 }
 
 img.planner {

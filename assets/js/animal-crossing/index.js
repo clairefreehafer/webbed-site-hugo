@@ -66,4 +66,11 @@ window.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementsByClassName("sand")?.[0];
   if (!container) throw new Error("there was a problem getting the .sand element.");
   container.style.backgroundImage = `url("/images/animal-crossing/sand/square_${grassDateRange}.png")`;
+
+  const time = document.getElementById("time");
+  if (!time) return;
+  time.innerHTML = new Date().toLocaleTimeString([], {
+    hour: "numeric",
+    minute: "2-digit",
+  })
 });
