@@ -2,8 +2,9 @@ carbs:
   - noodles
   - pasta
 protein:
+  - egg
   - tuna
 vegetables:
   - 'broccoli rabe'
   - 'red onion'
-  - 'scallion'
+  - scallion
