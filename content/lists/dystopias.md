@@ -1,6 +1,6 @@
 +++
-name = 'dystopias'
-title = 'dystopias'
+name = 'world building'
+title = 'world building'
 tags = ['books']
 +++
 
