@@ -3,7 +3,7 @@ name = 'creamy mushroom pasta'
 title = 'creamy mushroom pasta' 
 sourceUrl = 'https://www.budgetbytes.com/one-pot-creamy-mushroom-pasta/'
 ingredients = [
-  'pasta'
+  'pasta',
   'mushroom'
 ]
 +++
