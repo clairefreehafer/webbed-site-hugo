@@ -19,7 +19,7 @@ ingredients = [
 - 5 cloves garlic, minced
 - 3 tbsp heavy cream
 - 1 tbsp soy sauce
- salt, pepper, nori, green onions, sesame seeds
+- salt, pepper, nori, green onions, sesame seeds
 
 #### instructions
 
