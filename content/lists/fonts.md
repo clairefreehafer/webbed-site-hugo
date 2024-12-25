@@ -4,7 +4,7 @@ title = 'fonts'
 tags = ['links']
 +++
 
-- [https://www.brailleinstitute.org/freefont/](Atkinson hyperlegible)
+- [atkinson hyperlegible](https://www.brailleinstitute.org/freefont/)
 - [coding fonts](https://coding-fonts.pages.dev/)
 - [comic mono](https://dtinth.github.io/comic-mono-font/)
 - [hack](https://sourcefoundry.org/hack/)
