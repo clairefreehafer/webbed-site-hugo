@@ -1,10 +1,18 @@
 carbs:
-  - noodles
+  - bread
+  - farro
   - pasta
+  - rice
 protein:
   - egg
   - tuna
 vegetables:
+  - aruguls
   - 'broccoli rabe'
+  - 'butternut squash'
+  - mushroom
+  - potato
   - 'red onion'
   - scallion
+  - shallot
+  - sweet onion
