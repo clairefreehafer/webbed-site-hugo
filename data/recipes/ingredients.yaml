@@ -17,3 +17,8 @@ vegetables:
   - scallion
   - shallot
   - sweet onion
+flavor:
+  - gochujang
+  - miso
+  - pesto
+  - tahini
