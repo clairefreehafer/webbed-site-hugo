@@ -3,7 +3,7 @@ name = 'gochujang sesame noodles'
 title = 'gochujang sesame noodles'
 sourceUrl = 'https://www.bonappetit.com/recipe/gochujang-sesame-noodles'
 ingredients = [
-  'noodles',
+  'pasta',
   'gochujang',
   'tahini',
   'broccoli rabe'
