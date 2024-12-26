@@ -3,7 +3,7 @@ name = 'kimchi udon with scallions'
 title = 'kimchi udon with scallions'
 sourceUrl = 'https://www.bonappetit.com/recipe/kimchi-udon-with-scallions'
 ingredients = [
-  'noodles',
+  'pasta',
   'gochujang',
   'kimchi',
   'scallion'
