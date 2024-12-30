@@ -31,3 +31,15 @@ flavor:
   - miso
   - pesto
   - tahini
+liquor:
+  - bourbon
+  - vodka
+liqueur:
+  - 'ancho reyes'
+  - 'orange liqueur'
+wine:
+  - vermouth
+bitters:
+  - 'angostura bitters'
+  - 'chocolate bitters'
+  - 'orange bitters'

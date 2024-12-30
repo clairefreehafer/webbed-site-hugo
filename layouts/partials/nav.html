@@ -5,6 +5,10 @@
     {{ $class := "" }}
     {{- if $currentPage.IsMenuCurrent .Menu . }}
       {{ $class = "active" }}
+    {{ else if eq .URL "/" }}
+      <!-- do nothing -->
+    {{ else if strings.Contains $currentPage.RelPermalink .URL }}
+      {{ $class = "active" }}
     {{ end }}
     <li class="nav-list_item">
       {{ with resources.Get (printf "/images/%s/icons/%s" $.Page.Section $linkIcon) }}
