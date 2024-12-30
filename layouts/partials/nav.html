@@ -1,11 +1,16 @@
 <ul class="nav-list">
+  {{ $currentPage := . }}
   {{ range .Site.Menus.root }}
     {{ $linkIcon := (index .Params.icon $.Page.Section) }}
+    {{ $class := "" }}
+    {{- if $currentPage.IsMenuCurrent .Menu . }}
+      {{ $class = "active" }}
+    {{ end }}
     <li class="nav-list_item">
       {{ with resources.Get (printf "/images/%s/icons/%s" $.Page.Section $linkIcon) }}
         <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="" class="nav-icon">
       {{ end }}
-      <a href="{{ .URL }}">{{ .Name }}</a>
+      <a href="{{ .URL }}" class="{{ $class }}">{{ .Name }}</a>
     </li>
   {{ end }}
 </ul>
