@@ -1,11 +1,11 @@
 +++
-name = 'butternut squash with pasta and sage' 
-title = 'butternut squash with pasta and sage' 
+name = 'butternut squash with pasta and sage'
+title = 'butternut squash with pasta and sage'
 sourceUrl = 'https://www.thespruceeats.com/butternut-squash-and-pasta-with-sage-3062229'
 ingredients = [
   'butternut squash',
   'pasta',
-  'sweet onion'
+  'onion'
 ]
 +++
 
@@ -37,5 +37,5 @@ ingredients = [
 
 7. add the **pasta** and toss to coat. crumble the **sage leaves** over the mixture. add the **butternut squash** and **onions**. return to medium-low heat and continue cooking, stirring frequently, until pasta and squash are warmed through.
 
-8. toss with 1/2 cup of shredded **parmesan cheese**, adjust the seasoning with salt and pepper if needed. serve with more parmesan and lemon wedge, if desired. 
+8. toss with 1/2 cup of shredded **parmesan cheese**, adjust the seasoning with salt and pepper if needed. serve with more parmesan and lemon wedge, if desired.
 

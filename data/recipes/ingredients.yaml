@@ -1,23 +1,32 @@
 carbs:
   - bread
   - farro
+  - flatbread
   - pasta
   - rice
+  - risotto
 protein:
+  - chicken
   - egg
   - tuna
 vegetables:
   - arugula
   - 'broccoli rabe'
   - 'butternut squash'
+  - carrot
   - kimchi
   - mushroom
+  - pepper
   - potato
-  - 'red onion'
+  - onion
   - scallion
   - shallot
-  - sweet onion
+  - tomato
+  - zucchini
+fruit:
+ - pineapple
 flavor:
+  - 'bbq sauce'
   - gochujang
   - miso
   - pesto

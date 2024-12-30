@@ -6,12 +6,11 @@ ingredients = [
   'chicken',
   'carrot',
   'chickpea',
-  'yellow onion'
+  'onion'
 ]
 +++
 
 #### ingredients
-
 
 - homemade Pie Crust or All Butter Pie Crust (both recipes make 2 crusts, 1 for bottom and 1 for top)
 - 1 pound (450g) skinless boneless chicken breast or thighs, cubed
@@ -29,7 +28,7 @@ ingredients = [
 - egg wash: 1 large egg beaten with 1 tablespoon (15ml) milk
 - optional: sprigs of fresh thyme for garnish
 
-#### instructions 
+#### instructions
 
 1. in a large pot, combine **chicken**, **carrots**, and **celery**. add enough water to cover the chicken and vegetables, then place over medium-high heat. bring to a boil, then allow to boil for 10 minutes. remove from heat, drain, and set aside.
 
