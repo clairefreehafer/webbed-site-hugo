@@ -1,5 +1,6 @@
 
 @use "variables";
+@use "mixins";
 
 @font-face {
   font-family: "Atkinson Hyperlegible";
@@ -32,8 +33,7 @@ h2 {
   font-size: 2rem;
 
   &.section-heading {
-    border-bottom: 3px dotted yellow;
-    width: fit-content;
+    @include mixins.dotted-underline(3px);
   }
 }
 
@@ -46,8 +46,7 @@ h4 {
 }
 
 .content h4, .content h3 {
-  border-bottom: 2px dotted yellow;
-  max-width: fit-content;
+  @include mixins.dotted-underline(2px);
 }
 
 .see-more h4 {

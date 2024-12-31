@@ -17,6 +17,19 @@
   align-items: center;
   display: flex;
   gap: 0.5rem;
+
+  @media screen and (max-width: variables.$max-site-width) {
+    align-items: flex-start;
+    flex-direction: column;
+
+    & > h2 {
+      font-size: 1.25rem;
+    }
+
+    & > span {
+      display: none;
+    }
+  }
 }
 
 section.content {

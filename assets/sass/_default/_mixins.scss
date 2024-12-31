@@ -48,3 +48,8 @@
     box-shadow: $shadow-fn;
   }
 }
+
+@mixin dotted-underline($size, $width: fit-content) {
+  border-bottom: $size dotted yellow;
+  width: $width;
+}
