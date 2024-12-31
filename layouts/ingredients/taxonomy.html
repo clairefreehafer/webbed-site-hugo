@@ -6,10 +6,22 @@
 
     {{ $pages := .Pages }}
 
-    {{ range $foodType, $food := .Site.Data.recipes.ingredients }}
-      <h3>{{ $foodType }}</h3>
+    <h3>food</h3>
+    {{ range $foodType, $food := .Site.Data.recipes.ingredients.food }}
+      <h4>{{ $foodType }}</h4>
       <ul class="section-list">
-        {{ $pagesOfType := where $pages "Params.foodType" $foodType }}
+        {{ $pagesOfType := where $pages "Params.ingredientType" $foodType }}
+        {{ range $pagesOfType }}
+          <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+        {{ end }}
+      </ul>
+    {{ end }}
+
+    <h3>drink</h3>
+    {{ range $drinkType, $drink := .Site.Data.recipes.ingredients.drink }}
+      <h4>{{ $drinkType }}</h4>
+      <ul class="section-list">
+        {{ $pagesOfType := where $pages "Params.ingredientType" $drinkType }}
         {{ range $pagesOfType }}
           <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
         {{ end }}
@@ -18,7 +30,7 @@
 
     <h3>not yet categorized</h3>
     <ul class="section-list">
-      {{ range where .Pages "Params.foodtype" nil  }}
+      {{ range where .Pages "Params.ingredienttype" nil }}
         <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
       {{ end }}
     </ul>

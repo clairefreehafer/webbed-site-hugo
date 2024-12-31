@@ -1,7 +1,8 @@
-{{ range $foodType, $food := .Site.Data.recipes.ingredients }}
-  {{ $params := dict "foodType" $foodType }}
-    {{ range $food }}
-      {{ if $food }}
+{{ range $ingredientCategory, $ingredientTypes := .Site.Data.recipes.ingredients }}
+  {{ range $ingredientType, $ingredients := $ingredientTypes }}
+    {{ $params := dict "ingredientType" $ingredientType }}
+    {{ range $ingredients }}
+      {{ if . }}
         {{ $page := dict
           "kind" "term"
           "params" $params
@@ -11,4 +12,5 @@
         {{ $.AddPage $page }}
       {{ end }}
     {{ end }}
+  {{ end }}
 {{ end }}

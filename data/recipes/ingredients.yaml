@@ -1,45 +1,47 @@
-carbs:
-  - bread
-  - farro
-  - flatbread
-  - pasta
-  - rice
-  - risotto
-protein:
-  - chicken
-  - egg
-  - tuna
-vegetables:
-  - arugula
-  - 'broccoli rabe'
-  - 'butternut squash'
-  - carrot
-  - kimchi
-  - mushroom
-  - pepper
-  - potato
-  - onion
-  - scallion
-  - shallot
-  - tomato
-  - zucchini
-fruit:
- - pineapple
-flavor:
-  - 'bbq sauce'
-  - gochujang
-  - miso
-  - pesto
-  - tahini
-liquor:
-  - bourbon
-  - vodka
-liqueur:
-  - 'ancho reyes'
-  - 'orange liqueur'
-wine:
-  - vermouth
-bitters:
-  - 'angostura bitters'
-  - 'chocolate bitters'
-  - 'orange bitters'
+food:
+  carbs:
+    - bread
+    - farro
+    - flatbread
+    - pasta
+    - rice
+    - risotto
+  protein:
+    - chicken
+    - egg
+    - tuna
+  vegetables:
+    - arugula
+    - 'broccoli rabe'
+    - 'butternut squash'
+    - carrot
+    - kimchi
+    - mushroom
+    - pepper
+    - potato
+    - onion
+    - scallion
+    - shallot
+    - tomato
+    - zucchini
+  fruit:
+  - pineapple
+  flavor:
+    - 'bbq sauce'
+    - gochujang
+    - miso
+    - pesto
+    - tahini
+drink:
+  liquor:
+    - bourbon
+    - vodka
+  liqueur:
+    - 'ancho reyes'
+    - 'orange liqueur'
+  wine:
+    - vermouth
+  bitters:
+    - 'angostura bitters'
+    - 'chocolate bitters'
+    - 'orange bitters'
