@@ -12,6 +12,7 @@ food:
     - tuna
   vegetables:
     - arugula
+    - asparagus
     - 'broccoli rabe'
     - 'butternut squash'
     - carrot
@@ -35,6 +36,10 @@ food:
 drink:
   liquor:
     - bourbon
+    - gin
+    - mezcal
+    - tequila
+    - rum
     - vodka
   liqueur:
     - 'ancho reyes'
