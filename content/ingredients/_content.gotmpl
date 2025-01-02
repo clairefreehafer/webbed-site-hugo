@@ -1,5 +1,4 @@
 {{ range .Site.Data.recipes.ingredients }}
-  {{ warnf "%s" .items }}
   {{ range .items }}
     {{ $params := dict "ingredientType" .name }}
     {{ range .items }}
