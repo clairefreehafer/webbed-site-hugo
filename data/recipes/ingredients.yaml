@@ -1,52 +1,79 @@
-food:
-  carbs:
-    - bread
-    - farro
-    - flatbread
-    - pasta
-    - rice
-    - risotto
-  protein:
-    - chicken
-    - egg
-    - tuna
-  vegetables:
-    - arugula
-    - asparagus
-    - 'broccoli rabe'
-    - 'butternut squash'
-    - carrot
-    - kimchi
-    - mushroom
-    - pepper
-    - potato
-    - onion
-    - scallion
-    - shallot
-    - tomato
-    - zucchini
-  fruit:
-  - pineapple
-  flavor:
-    - 'bbq sauce'
-    - gochujang
-    - miso
-    - pesto
-    - tahini
-drink:
-  liquor:
-    - bourbon
-    - gin
-    - mezcal
-    - tequila
-    - rum
-    - vodka
-  liqueur:
-    - 'ancho reyes'
-    - 'orange liqueur'
-  wine:
-    - vermouth
-  bitters:
-    - 'angostura bitters'
-    - 'chocolate bitters'
-    - 'orange bitters'
+- name: food
+  items:
+    - name: carbs
+      items:
+        - bread
+        - farro
+        - flatbread
+        - gnocchi
+        - pasta
+        - rice
+        - risotto
+    - name: protein
+      items:
+        - chicken
+        - chickpea
+        - egg
+        - tuna
+    - name: vegetables
+      items:
+        - arugula
+        - asparagus
+        - 'broccoli rabe'
+        - 'butternut squash'
+        - cabbage
+        - carrot
+        - corn
+        - jalapeño
+        - kale
+        - mushroom
+        - onion
+        - pepper
+        - potato
+        - radish
+        - scallion
+        - shallot
+        - 'sweet potato'
+        - tomato
+        - zucchini
+    - name: fruit
+      items:
+        - apple
+        - lemon
+        - pineapple
+    - name: cheese
+      items:
+        - parmesan
+    - name: flavor
+      items:
+        - 'bbq sauce'
+        - gochujang
+        - kimchi
+        - miso
+        - pesto
+        - tahini
+- name: drink
+  items:
+    - name: liquor
+      items:
+        - bourbon
+        - cognac
+        - gin
+        - mezcal
+        - tequila
+        - rum
+        - vodka
+    - name: liqueur
+      items:
+        - 'ancho reyes'
+        - campari
+        - 'orange liqueur'
+    - name: wine
+      items:
+        - madeira wine
+        - vermouth
+    - name: bitters
+      items:
+        - 'angostura bitters'
+        - 'chocolate bitters'
+        - 'orange bitters'

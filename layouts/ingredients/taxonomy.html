@@ -6,33 +6,27 @@
 
     {{ $pages := .Pages }}
 
-    <h3>food</h3>
-    {{ range $foodType, $food := .Site.Data.recipes.ingredients.food }}
-      <h4>{{ $foodType }}</h4>
-      <ul class="ingredient-list">
-        {{ $pagesOfType := where $pages "Params.ingredientType" $foodType }}
-        {{ range $pagesOfType }}
-          <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-        {{ end }}
-      </ul>
-    {{ end }}
-
-    <h3>drink</h3>
-    {{ range $drinkType, $drink := .Site.Data.recipes.ingredients.drink }}
-      <h4>{{ $drinkType }}</h4>
-      <ul class="ingredient-list">
-        {{ $pagesOfType := where $pages "Params.ingredientType" $drinkType }}
-        {{ range $pagesOfType }}
-          <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-        {{ end }}
-      </ul>
-    {{ end }}
-
-    <h3>not yet categorized</h3>
-    <ul class="ingredient-list">
-      {{ range where .Pages "Params.ingredienttype" nil }}
-        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+    {{ range .Site.Data.recipes.ingredients }}
+      <h3>{{ .name }}</h3>
+      {{ range .items }}
+        <h4>{{ .name }}</h4>
+        <ul class="ingredient-list">
+          {{ $pagesOfType := where $pages "Params.ingredientType" .name }}
+          {{ range $pagesOfType }}
+            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+          {{ end }}
+        </ul>
       {{ end }}
-    </ul>
+    {{ end }}
+
+    {{ $numUncategorized := len (where .Pages "Params.ingredienttype" nil) }}
+    {{ if gt $numUncategorized 0 }}
+      <h3>not yet categorized</h3>
+      <ul class="ingredient-list">
+        {{ range where .Pages "Params.ingredienttype" nil }}
+          <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+        {{ end }}
+      </ul>
+    {{ end }}
   </section>
 {{ end }}

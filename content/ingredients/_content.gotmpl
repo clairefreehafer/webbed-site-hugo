@@ -1,7 +1,8 @@
-{{ range $ingredientCategory, $ingredientTypes := .Site.Data.recipes.ingredients }}
-  {{ range $ingredientType, $ingredients := $ingredientTypes }}
-    {{ $params := dict "ingredientType" $ingredientType }}
-    {{ range $ingredients }}
+{{ range .Site.Data.recipes.ingredients }}
+  {{ warnf "%s" .items }}
+  {{ range .items }}
+    {{ $params := dict "ingredientType" .name }}
+    {{ range .items }}
       {{ if . }}
         {{ $page := dict
           "kind" "term"
