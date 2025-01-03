@@ -7,7 +7,7 @@ ingredients = [
   'tomato',
   'mozzarella',
   'pesto',
-  'argula'
+  'arugula'
 ]
 +++
 
