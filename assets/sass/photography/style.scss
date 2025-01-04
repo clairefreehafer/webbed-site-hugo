@@ -1,6 +1,10 @@
-.html {
+@use "nav";
+
+html.html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 0.5rem;;
+  display: flex;
+  min-height: 100vh;
+  padding: 0.5rem;
 }
 
 a {
@@ -11,17 +15,23 @@ a {
   }
 }
 
+body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
 header {
   align-items: center;
   display: flex;
   justify-content: space-between;
 }
 
-a.home:hover::before {
-  content: '←';
-  text-decoration: none;
-  margin-right: 0.5rem;
-}
+// a.home:hover::before {
+//   content: '←';
+//   text-decoration: none;
+//   margin-right: 0.5rem;
+// }
 
 h1 {
   font-weight: 300;
