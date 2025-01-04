@@ -1,4 +1,4 @@
 +++
-name = 'cocktail recipes'
-title = 'cocktail recipes'
+name = 'cocktails'
+title = 'cocktails'
 +++

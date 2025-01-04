@@ -5,10 +5,11 @@ sourceUrl = 'https://www.hellofresh.com/recipes/heirloom-tomato-flatbreads-5b368
 ingredients = [
   'flatbread',
   'tomato',
-  'mozzarella',
+  'arugula',
   'pesto',
-  'arugula'
+  'mozzarella',
 ]
+lastMade = 2024-01-03
 +++
 
 #### ingredients
@@ -19,8 +20,8 @@ ingredients = [
 - 4 oz pesto
 - 5 tsp balsamic vinegar
 - 4 oz arugula
-- 2 oz walnuts, roughly chopped
 - 1 oz basil
+- 2 oz walnuts, roughly chopped
 - 4 tsp olive oil
 
 #### instructions

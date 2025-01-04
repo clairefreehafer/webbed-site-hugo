@@ -9,7 +9,6 @@ ingredients = [
   'onion',
   'parmesan',
 ]
-lastMade = 2025-01-03
 +++
 
 #### ingredients
