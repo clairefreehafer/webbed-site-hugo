@@ -1,0 +1,43 @@
+{{ $data := dict }}
+
+{{ $config := .Site.Data.smugmug.nodeChildrenConfig | jsonify }}
+{{ $urlQuery := urlquery $config }}
+
+{{ if .Site.Param "smugmugApiKey" }}
+  {{ $url := printf  "https://api.smugmug.com/api/v2/node/p2XgBc!children?APIKey=%s&_config=%s" (.Site.Param "smugmugApiKey") $urlQuery }}
+  {{ $opts := dict
+    "headers" (dict "Accept" "application/json")
+  }}
+  {{ with resources.GetRemote $url $opts }}
+    {{ with .Err }}
+      {{ errorf "%s" . }}
+    {{ else }}
+      {{ $data = . | transform.Unmarshal }}
+    {{ end }}
+  {{ else }}
+    {{ errorf "Unable to get remote resource %q" $url }}
+  {{ end }}
+{{ else }}
+  no smugmug api key provided.
+{{ end }}
+
+{{ warnf "%s" $data.Expansions }}
+
+{{ $categories := $data.result.categories }}
+
+{{ range $categories }}
+
+  {{/* Add page. */}}
+  {{ $content := dict "mediaType" "text/markdown" "value" .url }}
+  {{ $params := dict "id" .id }}
+  {{ $page := dict
+    "content" $content
+    "kind" "page"
+    "params" $params
+    "path" .name
+    "title" .name
+  }}
+  {{ $.AddPage $page }}
+{{ end }}
+
+

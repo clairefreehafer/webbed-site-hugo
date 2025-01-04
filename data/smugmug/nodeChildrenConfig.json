@@ -1,0 +1,15 @@
+{
+  "filter": [""],
+  "filteruri": ["HighlightImage"],
+  "expand": {
+    "HighlightImage": {
+      "filter": [""],
+      "filteruri": ["ImageSizeDetails"],
+      "expand": {
+        "ImageSizeDetails": {
+          "filter": ["ImageSizeLarge"]
+        }
+      }
+    }
+  }
+}
