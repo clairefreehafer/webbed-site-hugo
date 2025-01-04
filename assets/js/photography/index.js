@@ -3,29 +3,29 @@ const isPhotographyHome = path.length === 3;
 
 let menuOpen = false;
 
-function handleMenuFactory(navEl) {
-  return function handleMenu(e) {
+function handleMenuFactory(htmlEl) {
+  return function (e) {
     e.preventDefault();
 
     menuOpen = !menuOpen;
 
     if (menuOpen) {
-      navEl.classList.add("open");
+      htmlEl.classList.add("nav-open");
     } else {
-      navEl.classList.remove("open");
+      htmlEl.classList.remove("nav-open");
     }
   }
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  const nav = document.getElementById("photographyNav");
-  if (!nav) throw new Error("no #photgraphyNav element found.");
+  const html = document.getElementsByTagName("html")?.[0];
+  if (!html) throw new Error("no #photgraphyNav element found.");
 
   // TODO: eventually let's add a slideshow instead of the open menu.
   if (isPhotographyHome) {
-    nav.classList.add("open");
+    html.classList.add("nav-open");
   } else {
     const navButton = document.getElementById("navigateButton");
-    navButton.addEventListener("click", handleMenuFactory(nav));
+    navButton.addEventListener("click", handleMenuFactory(html));
   }
 });

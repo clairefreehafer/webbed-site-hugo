@@ -4,10 +4,6 @@ nav.photography {
   flex: 2;
   justify-content: center;
 
-  &.open {
-    display: flex;
-  }
-
   & ul {
     align-items: center;
     display: flex;
@@ -34,5 +30,11 @@ button.navigate {
 
   &:hover {
     text-decoration: none;
+  }
+}
+
+.nav-open {
+  nav.photography {
+    display: flex;
   }
 }

@@ -1,6 +1,1 @@
 baseURL = 'https://clairefreehafer.neocities.org/'
-[module]
-  [[module.mounts]]
-    excludeFiles = ['photography/*']
-    source = 'content'
-    target = 'content'
