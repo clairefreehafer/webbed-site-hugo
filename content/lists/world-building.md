@@ -6,7 +6,7 @@ tags = ['books']
 
 stories with interesting world building
 
-### 📚 books
+#### 📚 books
 
 - _Amatka_ by Karin Tidbeck
 - _An Unkindness of Ghosts_	by Rivers Solomon
