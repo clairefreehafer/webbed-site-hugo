@@ -1,0 +1,11 @@
++++
+name = 'photography'
+title = 'photography'
+tags = ['link']
++++
+
+photography-related links.
+
+- [adaptall-2.com](http://adaptall-2.com/) — one-stop source for information about tamron products no longer in production 
+- [camerhack](https://www.camerhack.it/) — photography adapters
+- [Garry's camera repair](http://garryscamera.com/)

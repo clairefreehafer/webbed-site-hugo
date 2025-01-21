@@ -10,3 +10,4 @@ tags = ['links']
 - [hack](https://sourcefoundry.org/hack/)
 - [mono lisa](https://www.monolisa.dev/)
 - [monoid](https://larsenwork.com/monoid/)
+- [old-school PC fonts](https://int10h.org/oldschool-pc-fonts/fontlist/)

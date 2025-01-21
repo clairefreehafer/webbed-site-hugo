@@ -17,3 +17,7 @@ stories with interesting world building
 - _The City & The City_ by China Miéville
 - _Waste Tide_ by Chen Qiufan
 - _We_ by Yevgeny Zamyatin
+
+#### 📺 television
+
+- _Severance_ (2022-present)
