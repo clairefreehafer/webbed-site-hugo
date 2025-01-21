@@ -12,12 +12,12 @@ ingredients = [
 
 #### ingredients
 
-- (2) veggie stock concentrate
-- 2 scallions
 - 3/4 cup arborio rice
-- 1 tbsp Tuscan heat spice
-- 4 oz grape tomatoes
+- 2 scallions
 - 1 zucchini
+- 4 oz grape tomatoes
+- 1 tbsp tuscan heat spice
+- (2) veggie stock concentrate
 - 5 tsp basil oil
 - 5 tsp balsamic vinegar
 - 1/4 cup parmesan cheese

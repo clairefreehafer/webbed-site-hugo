@@ -8,6 +8,7 @@ ingredients = [
   'tomato',
   'onion',
   'parmesan',
+  'chili flake',
 ]
 +++
 
@@ -20,7 +21,7 @@ ingredients = [
 - 1/4 cup parmesan cheese
 - 10(?) c vegetable stock
 - 4 tbsp garlic herb butter
-- 1 tsp chilli flakes
+- 1 tsp chili flakes
 - 2 tbsp butter
 - 4 tsp olive oil
 

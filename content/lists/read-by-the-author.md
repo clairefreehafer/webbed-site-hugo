@@ -1,6 +1,6 @@
 +++
 name = 'read by the author'
-title = 'read by the author' 
+title = 'read by the author'
 tags = [
   'books'
 ]
@@ -16,8 +16,9 @@ audiobooks read by the author.
 - _Gathering Moss_ by Robin Wall Kimmerer
 - _Heavy_ by Kiese Layman
 - _How Far the Light Reaches_ by Sabrina Imbler
-- _Leg_ by Greg Marshall 
+- _Leg_ by Greg Marshall
 - _Making Love with the Land_ by Jonathan Whitehead
+- _Memory Palace_ by Nate DiMeo
 - _Mott Street_ by Ava Chin
 - _Naked_ by Fancy Feast
 - _The Future is Disabled_ by Leah Lakshmi Piepzna-Samarasinha

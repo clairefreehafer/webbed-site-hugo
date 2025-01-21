@@ -8,6 +8,9 @@ ingredients = [
   'pepper',
   'onion',
   'bbq sauce',
+  'cilantro',
+  'mozzarella',
+  'monterey jack',
 ]
 +++
 
@@ -24,8 +27,6 @@ ingredients = [
 - 2 oz BBQ sauce
 - 1 tsp olive oil
 - 4 tsp vegetable oil
-- salt
-- pepper
 
 #### instructions
 
