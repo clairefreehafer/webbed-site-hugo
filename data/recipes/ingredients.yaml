@@ -9,8 +9,10 @@
         - pasta
         - rice
         - risotto
+        - tortilla
     - name: protein
       items:
+        - black bean
         - chicken
         - chickpea
         - egg
@@ -19,11 +21,14 @@
       items:
         - arugula
         - asparagus
-        - 'broccoli rabe'
-        - 'butternut squash'
+        - avocado
+        - broccoli rabe
+        - butternut squash
         - cabbage
         - carrot
         - corn
+        - cucumber
+        - green bean
         - jalapeño
         - kale
         - mushroom
@@ -33,25 +38,44 @@
         - radish
         - scallion
         - shallot
-        - 'sweet potato'
+        - spring mix
+        - sweet potato
         - tomato
+        - yellow squash
         - zucchini
     - name: fruit
       items:
         - apple
+        - cranberry
         - lemon
         - pineapple
     - name: cheese
       items:
+        - cheddar
+        - cream cheese
+        - monterey jack
+        - mozzarella
         - parmesan
+        - ricotta
+    - name: herbs
+      items:
+        - basil
+        - chive
+        - cilantro
+        - parsley
+    - name: spices
+      items:
+        - chili flake
     - name: flavor
       items:
-        - 'bbq sauce'
+        - bbq sauce
         - gochujang
         - kimchi
         - miso
         - pesto
+        - sriracha
         - tahini
+        - truffle oil
 - name: drink
   items:
     - name: liquor
@@ -65,15 +89,15 @@
         - vodka
     - name: liqueur
       items:
-        - 'ancho reyes'
+        - ancho reyes
         - campari
-        - 'orange liqueur'
+        - orange liqueur
     - name: wine
       items:
         - madeira wine
         - vermouth
     - name: bitters
       items:
-        - 'angostura bitters'
-        - 'chocolate bitters'
-        - 'orange bitters'
+        - angostura bitters
+        - chocolate bitters
+        - orange bitters
