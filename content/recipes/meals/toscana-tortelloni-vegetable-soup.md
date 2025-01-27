@@ -1,7 +1,7 @@
 +++
 name = 'toscana tortelloni vegetable soup'
 title = 'toscana tortelloni vegetable soup'
-sourceUrl = ''
+sourceUrl = 'https://www.hellofresh.com/recipes/toscana-tortelloni-vegetable-soup-5e1e446533552618ea133260'
 ingredients = [
   'pasta',
   'bread',
@@ -10,6 +10,7 @@ ingredients = [
   'onion',
   'parmesan',
 ]
+lastMade = 2025-01-27
 +++
 
 #### ingredients
