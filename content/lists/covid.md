@@ -15,3 +15,4 @@ tags = [
 - [envo mask](https://envomask.com/) – reusable
 - [flo mask](https://www.flomask.com/) – reusable
   - [mask squad](https://masksquad.bigcartel.com/) – decals
+- [zimi air](https://zimiair.com/) — disposable
